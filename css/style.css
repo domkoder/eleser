@@ -18,8 +18,8 @@
 
 body {
   font-family: 'Libre Franklin', sans-serif;
-  /* font-size: 1rem; */
   background: #fff;
+  overflow: hidden;
 }
 
 ul,
@@ -181,6 +181,38 @@ footer .social i:hover {
 footer small {
   display: block;
   color: var(--gray);
+}
+
+/* Than you page */
+.flex-container.thanks {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.thanks h1 {
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.thanks i {
+  color: #65d073;
+  font-size: 5rem;
+}
+
+.thanks a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  background: var(--purple);
+  margin-top: 2rem;
+  font-family: inherit;
+  font-weight: 500;
+  border-radius: 40px;
+}
+.thanks a:hover {
+  background-color: #774799;
 }
 
 /* Normal screen */
