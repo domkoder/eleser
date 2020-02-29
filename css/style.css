@@ -19,7 +19,6 @@
 body {
   font-family: 'Libre Franklin', sans-serif;
   background: #fff;
-  overflow: hidden;
 }
 
 ul,
@@ -219,7 +218,7 @@ footer small {
 @media (min-width: 769px) {
   .container {
     max-width: 800px;
-    padding: 2rem 2rem;
+    padding: 0 2rem;
     /* border: 1px solid var(--purple); */
   }
 
