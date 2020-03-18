@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-    <title>Dashboard</title>
   </head>
   <body>
     <div class="wrapper">
@@ -65,47 +66,56 @@
           </div>
         </header>
         <main class="main-content">
-          <h1 class="heading">Statistics</h1>
-          <div class="row">
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
+          <h1 class="heading">Forms</h1>
+          <div class="form">
+            <form action="">
+              <div class="form-control">
+                <label for="text">Text</label>
+                <input type="text" name="text" id="" placeholder="Enter text" />
               </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
 
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
+              <div class="form-group">
+                <div class="form-control">
+                  <label for="number">Date</label>
+                  <input type="date" value="11/04/2020" name="" id="" />
+                  <small>dd/mm/yyyy</small>
+                </div>
+                <div class="form-control">
+                  <label for="number">Time</label>
+                  <input type="time" value="9:00am" name="" id="" />
+                  <small>ex. 12:00am</small>
+                </div>
               </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
 
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
+              <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" name="" id="" placeholder="Enter email" />
               </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
 
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
+              <div class="form-control">
+                <label for="number">Number</label>
+                <input type="number" name="" id="" placeholder="Enter number" />
               </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
+
+              <div class="form-control">
+                <label for="option">Select</label>
+                <select name="" id="">
+                  <option value="">Select Something</option>
+                  <option value="">1</option>
+                  <option value="">2</option>
+                </select>
               </div>
-            </div>
+
+              <div class="form-control">
+                <div class="inline">
+                  <label for="">test<input type="radio" name="" id=""/></label>
+                  <label for="">test<input type="radio" name="" id=""/></label>
+                </div>
+              </div>
+
+              <hr class="hr" />
+              <input class="btn" type="submit" value="submit" />
+            </form>
           </div>
         </main>
       </section>

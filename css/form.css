@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,500,700,800,900&display=swap');
+.main-content form {
+  margin: 1rem;
+  /* border: 1px solid black; */
+  width: 60%;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.form .form-control {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.form-control label {
+  display: inline-block;
+}
+
+.form-control input,
+.form-control select {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #a0abb7;
+  color: rgb(56, 56, 56);
+  font-size: 0.8rem;
+  line-height: var(--line-height-form);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  background-color: #fff;
+  /* outline-color: #2767c0; */
+  font-family: inherit;
+  outline: none;
+}
+
+.form-control input:hover,
+.form-control select:hover {
+  background-color: #e6e6e6;
+}
+
+.form .hr {
+  margin-top: 4rem;
+  display: block;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.7rem;
+  text-align: center;
+  margin-top: 1rem;
+  border: none;
+  font-family: inherit;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #1d539f;
+  border-radius: 5px;
+}
+
+.form .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group .form-control {
+  flex-basis: 49%;
+}
+
+.form-control small {
+  color: gray;
+  font-size: 0.8rem;
+}
+
+.inline label {
+  padding-right: 2rem;
+}
