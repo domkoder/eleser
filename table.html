@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
-    <title>Dashboard</title>
   </head>
   <body>
     <div class="wrapper">
@@ -65,47 +66,57 @@
           </div>
         </header>
         <main class="main-content">
-          <h1 class="heading">Statistics</h1>
-          <div class="row">
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
-
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
-
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
-
-            <div class="overview-box">
-              <div class="icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="text">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>date</th>
+                  <th>type</th>
+                  <th>description</th>
+                  <th>status</th>
+                  <th>price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2018-09-29 05:57</td>
+                  <td>Mobile</td>
+                  <td>iPhone X 64Gb Grey</td>
+                  <td class="process">Processed</td>
+                  <td>$999.00</td>
+                  <td>
+                    <div class="table-data-feature">
+                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
+                        <i class="zmdi zmdi-mail-send"></i>
+                      </button>
+                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
+                        <i class="zmdi zmdi-edit"></i>
+                      </button>
+                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
+                        <i class="zmdi zmdi-delete"></i>
+                      </button>
+                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="More">
+                        <i class="zmdi zmdi-more"></i>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2018-09-28 01:22</td>
+                  <td>Mobile</td>
+                  <td>Samsung S8 Black</td>
+                  <td class="process">Processed</td>
+                  <td>$756.00</td>
+                </tr>
+                <tr>
+                  <td>2018-09-27 02:12</td>
+                  <td>Game</td>
+                  <td>Game Console Controller</td>
+                  <td class="denied">Denied</td>
+                  <td>$22.00</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </main>
       </section>
