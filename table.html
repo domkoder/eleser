@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/table.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="mdi-font/css/material-design-iconic-font.min.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -16,7 +17,7 @@
           <nav class="nav-sidebar">
             <ul class="list">
               <li class="active">
-                <a class="js-arrow" href="#"> <i class="fas fa-tachometer-alt"></i>Dashboard</a>
+                <a class="js-arrow" href="dashboard.html"> <i class="fas fa-tachometer-alt"></i>Dashboard</a>
               </li>
               <li>
                 <a href="table.html"> <i class="fas fa-chart-bar"></i>Table</a>
@@ -42,18 +43,18 @@
         <header class="header-desktop">
           <div class="header-flex">
             <div class="notification-item">
-              <li>
+              <!-- <li>
                 <a href="chart.html"> <i class="fas fa-chart-bar"></i></a>
                 <span>3</span>
-              </li>
+              </li> -->
 
               <li>
-                <a class="js-arrow" href="#"> <i class="fas fa-desktop"></i></a>
+                <a class="js-arrow" href="#"><i class="zmdi zmdi-email"></i></a>
                 <span>4</span>
               </li>
 
               <li>
-                <a href="map.html"> <i class="fas fa-map-marker-alt"></i></a>
+                <a href="map.html"><i class="zmdi zmdi-notifications"></i></a>
                 <span>6</span>
               </li>
             </div>
@@ -66,6 +67,7 @@
           </div>
         </header>
         <main class="main-content">
+          <h1 class="heading">Projects</h1>
           <div class="table-responsive">
             <table class="table">
               <thead>
@@ -75,6 +77,7 @@
                   <th>description</th>
                   <th>status</th>
                   <th>price</th>
+                  <th>actions</th>
                 </tr>
               </thead>
               <tbody>
@@ -86,18 +89,9 @@
                   <td>$999.00</td>
                   <td>
                     <div class="table-data-feature">
-                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Send">
-                        <i class="zmdi zmdi-mail-send"></i>
-                      </button>
-                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit">
-                        <i class="zmdi zmdi-edit"></i>
-                      </button>
-                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete">
-                        <i class="zmdi zmdi-delete"></i>
-                      </button>
-                      <button class="item" data-toggle="tooltip" data-placement="top" title="" data-original-title="More">
-                        <i class="zmdi zmdi-more"></i>
-                      </button>
+                      <a href="#"><i class="zmdi zmdi-edit"></i></a>
+                      <a href="#"><i class="zmdi zmdi-delete"></i></a>
+                      <a href="#"><i class="zmdi zmdi-more"></i></a>
                     </div>
                   </td>
                 </tr>
@@ -107,6 +101,13 @@
                   <td>Samsung S8 Black</td>
                   <td class="process">Processed</td>
                   <td>$756.00</td>
+                  <td>
+                    <div class="table-data-feature">
+                      <a href="#"><i class="zmdi zmdi-edit"></i></a>
+                      <a href="#"><i class="zmdi zmdi-delete"></i></a>
+                      <a href="#"><i class="zmdi zmdi-more"></i></a>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td>2018-09-27 02:12</td>
@@ -114,6 +115,13 @@
                   <td>Game Console Controller</td>
                   <td class="denied">Denied</td>
                   <td>$22.00</td>
+                  <td>
+                    <div class="table-data-feature">
+                      <a href="#"><i class="zmdi zmdi-edit"></i></a>
+                      <a href="#"><i class="zmdi zmdi-delete"></i></a>
+                      <a href="#"><i class="zmdi zmdi-more"></i></a>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>

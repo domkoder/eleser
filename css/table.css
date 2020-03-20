@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,500,700,800,900&display=swap');
+.main-content .table-responsive {
+  margin: 1rem auto;
+  /* border: 1px solid black; */
+  width: 100%;
+  border-radius: 0.25rem;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.table-responsive .table {
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  width: 100%;
+  overflow: scroll;
+}
+
+.table thead tr {
+  background-color: #006ecc;
+  color: #fff;
+  text-align: left;
+  font-weight: 900;
+  border-radius: 5px 5px 0 0;
+}
+
+.table th {
+  padding: 1rem;
+}
+.table thead th:first-child {
+  border-radius: 5px 0 0 0;
+}
+.table thead th:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+.table tbody tr {
+  font-weight: 200;
+  color: #333;
+  border-bottom: 1px solid #e4e2e2;
+}
+.table td {
+  padding: 0.5rem 1rem;
+}
+
+.table i {
+  padding: 0 0.5rem;
+}
+
+.table a {
+  color: #a9b3c9;
+}
