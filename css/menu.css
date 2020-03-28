@@ -1,0 +1,151 @@
+.mobile-menu-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.mobile-menu-wrap .toggler {
+  margin: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  opacity: 0;
+}
+
+.mobile-menu-wrap .hamburger {
+  margin: 1rem;
+  position: absolute;
+  border-radius: 5px;
+  top: 0px;
+  left: 0;
+  z-index: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  /* background: #a9b3c9; */
+  background: rgba(169, 179, 201, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* --secondary: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s; */
+}
+
+/* Hamburger line */
+.mobile-menu-wrap .hamburger > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.mobile-menu-wrap .hamburger > div::before,
+.mobile-menu-wrap .hamburger > div::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+
+.mobile-menu-wrap .hamburger > div::after {
+  top: 10px;
+}
+
+/* Toggler Animation */
+.mobile-menu-wrap .toggler:checked + .hamburger > div {
+  transform: rotate(135deg);
+}
+
+.mobile-menu-wrap .toggler:checked + .hamburger > div::before,
+.mobile-menu-wrap .toggler:checked + .hamburger > div::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.mobile-menu-wrap .toggler:checked:hover + .hamburger > div {
+  transform: rotate(225deg);
+}
+
+/* Show Menu */
+.mobile-menu-wrap .toggler:checked ~ .mobile-menu {
+  visibility: visible;
+}
+
+.mobile-menu-wrap .toggler:checked ~ .mobile-menu > div {
+  transform: scale(1);
+  transition-duration: 0.75s;
+}
+
+.mobile-menu-wrap .toggler:checked ~ .mobile-menu > div > div {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+/* menu */
+.mobile-menu-wrap .mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-wrap .mobile-menu > div {
+  background: rgba(24, 39, 51, 0.85);
+  border-radius: 50%;
+  width: 200vh;
+  height: 200vh;
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+
+.mobile-menu-wrap .mobile-menu > div > div {
+  /* text-align: center; */
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  transform: opacity 0.4s ease;
+}
+
+.mobile-menu-wrap .list li {
+  font-size: 1.5rem;
+  padding: 0.2rem;
+}
+
+.mobile-menu-wrap .list li a {
+  color: #fff;
+  transition: border 0.3s ease;
+  padding-bottom: 0.4rem;
+}
+
+.mobile-menu-wrap .list li a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.mobile-menu-wrap .list li a i {
+  padding-right: 0.5rem;
+}
