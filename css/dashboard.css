@@ -49,7 +49,8 @@ a {
 
 .side-bar {
   flex: 1 1 300px;
-  background-color: var(--dark-light);
+  /* background-color: var(--dark-light); */
+  background-color: #171347;
   height: 100vh;
   position: sticky;
   overflow: hidden;
@@ -194,8 +195,8 @@ a {
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  /*background-image: -webkit-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);*/
-  background: linear-gradient(to bottom, #21c8f6, #637bff);
+  background-image: -webkit-linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+  /* background: linear-gradient(to bottom, #21c8f6, #637bff); */
   color: white;
 }
 
@@ -238,6 +239,10 @@ a {
 @media only screen and (max-width: 783px) {
   .side-bar {
     display: none;
+  }
+
+  .mobile-menu-wrap {
+    display: block;
   }
   .wrapper {
     display: block;
