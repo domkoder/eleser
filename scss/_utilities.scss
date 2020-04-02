@@ -1,0 +1,22 @@
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// image styles
+.img--fit {
+  object-fit: cover;
+  object-position: center;
+}
+
+// text styles
+.text--dark {
+  color: $dark-color;
+}
+
+.text--white {
+  color: $white-color;
+}

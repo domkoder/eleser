@@ -1,0 +1,42 @@
+// Variables
+$primary-color: #4272d7;
+$light-color: #f5f5f5;
+$gray-color: #a9b3c9;
+$danger-color: #ff4b5a;
+$light-dark-color: #cdd6e6;
+$white-color: white;
+$white-dark-color: #e6e6e6;
+$dark-color: #333333;
+$radius: 5px;
+
+/**
+* major styling and reset
+**/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}

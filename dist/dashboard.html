@@ -11,50 +11,65 @@
   <body>
     <main>
       <header class="header">
-        <div class="header__logo"><a href="#">ADMIN</a></div>
+        <div class="header__logo"><h1>ADMIN</h1></div>
 
-        <div class="header__button">
-          <div class="notification__wrap">
-            <a href="#"><i class="zmdi zmdi-notifications"></i></a>
-            <span>6</span>
-            <!-- <div class="notification--dropdown js-dropdown">
-              <div class="notification__title">
-                <p>You have 1 Notification</p>
-              </div>
+        <div class="header__wrap">
+          <div class="header__button">
+            <div class="notification">
               <div class="notification__item">
-                <div class="img--cir img--size">
-                  <i class="zmdi zmdi-email-open"></i>
+                <div class="icon-wrap">
+                  <a href="#"><i class="zmdi zmdi-notifications"></i></a>
+                  <span>6</span>
                 </div>
-                <div class="notification__content">
-                  <p>You got a email notification</p>
-                  <span class="date">April 12, 2018 06:50</span>
-                </div>
-              </div>
-              <div class="notification__footer">
-                <a href="#">All notifications</a>
-              </div>
-            </div> -->
-          </div>
+                <div class="notification--dropdown js-dropdown">
+                  <div class="notification__title">
+                    <p>You have 3 Notification</p>
+                  </div>
+                  <ul class="notification__list">
+                    <li class="notification__content">
+                      <p>You got a email notification</p>
+                      <span class="date">April 12, 2018 06:50</span>
+                    </li>
 
-          <div class="account__wrap">
-            <img src="img/avataaars.svg" class="account__img" alt="John Doe" />
-            <div class="account__item-content">
-              <a class="" href="#">john doe</a>
+                    <li class="notification__content">
+                      <p>You got a email notification</p>
+                      <span class="date">April 12, 2018 06:50</span>
+                    </li>
+
+                    <li class="notification__content">
+                      <p>You got a email notification</p>
+                      <span class="date">April 12, 2018 06:50</span>
+                    </li>
+                  </ul>
+                  <div class="notification__footer">
+                    <a href="#">All notifications</a>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- <div class="account-dropdown js-dropdown">
-              <div class="acount__info">
-                <div class="account__content">
-                  <h5 class="name">
-                    <a href="#">john doe</a>
-                  </h5>
-                  <span class="email">johndoe@example.com</span>
+            <div class="account">
+              <div class="account__img">
+                <img src="img/avataaars.svg" class="img--fit" alt="John Doe" />
+              </div>
+
+              <div class="account__item-content">
+                <a href="#" class="text--dark">Nandom Alfred &nbsp; <i class="fas fa-angle-down"></i></a>
+
+                <div class="account-dropdown js-dropdown">
+                  <div class="account__info">
+                    <h5 class="name">
+                      <a href="#" class="text--dark">Nandom Alfred</a>
+                    </h5>
+                    <span class="email">johndoe@example.com</span>
+                  </div>
+
+                  <div class="account-dropdown__footer">
+                    <a href="#" class="text--white"> <i class="zmdi zmdi-power"></i>&nbsp; Logout</a>
+                  </div>
                 </div>
               </div>
-              <div class="account-dropdown__footer">
-                <a href="#"> <i class="zmdi zmdi-power"></i>Logout</a>
-              </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </header>

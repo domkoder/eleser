@@ -164,6 +164,7 @@ a {
 .account-item img {
   width: 15%;
   object-fit: cover;
+  display: block;
 }
 
 .account-item .content {
