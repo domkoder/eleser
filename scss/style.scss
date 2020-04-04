@@ -9,7 +9,6 @@
   align-items: center;
   height: 4.5rem;
   justify-content: space-between;
-  // overflow: hidden;
   position: sticky;
   top: 0;
   z-index: 2;
@@ -22,13 +21,13 @@
     font-size: 0.8rem;
     height: 4.5rem;
     border-right: 1px solid $gray-color;
-    padding: 1rem 2.3rem;
-    width: 300px;
+    padding: 1.5rem;
+    width: 250px;
     color: $dark-color;
   }
 
   &__wrap {
-    padding: 2rem;
+    padding: 0 1.5rem;
   }
 
   &__button {
@@ -130,3 +129,73 @@
     display: block;
   }
 }
+
+.notification__title,
+.notification__footer {
+  padding: 0.5rem;
+  text-align: center;
+  color: $gray-color;
+}
+
+.notification__list {
+  &-item {
+    border-bottom: 1px dashed $light-color;
+    font-size: 0.89rem;
+    padding-top: 0.5rem;
+  }
+  span {
+    display: block;
+    font-size: 0.7rem;
+    color: $gray-color;
+  }
+}
+
+// Side nav
+.aside {
+  border-right: 1px solid $gray-color;
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.sidebar {
+  position: sticky;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.nav {
+  margin-top: 6rem;
+  .nav__list {
+    padding: 1.5rem;
+  }
+
+  &__list-item {
+    padding-bottom: 1.5rem;
+  }
+
+  .list-item--active {
+    border-bottom: 2px solid $primary-color;
+  }
+
+  a {
+    padding: 0.3rem 0.1rem;
+    font-size: 1rem;
+    color: $nav-items-color;
+    font-weight: bold;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__icon {
+    padding-right: 0.5rem;
+  }
+}
+
+// .main-content {
+//   flex-basis: 0;
+//   flex-grow: 1;
+//   max-width: 100%;
+// }

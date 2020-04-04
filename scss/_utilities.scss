@@ -6,6 +6,15 @@
   margin-left: auto;
 }
 
+.container {
+  padding: 0 1.5;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 // image styles
 .img--fit {
   object-fit: cover;
@@ -19,4 +28,43 @@
 
 .text--white {
   color: $white-color;
+}
+
+.hide {
+  display: none;
+}
+
+// height styles
+.h--100 {
+  height: 100% !important;
+}
+
+// Background styles
+.bg--primary {
+  background-color: $primary-color;
+}
+
+.bg--light {
+  background-color: $light-color;
+}
+
+// Margin and Padding classes
+$space-amounts: (1, 2, 3, 4, 5);
+
+@each $space in $space-amounts {
+  .py--#{$space} {
+    padding: #{$space}rem 0;
+  }
+
+  .p--#{$space} {
+    padding: #{$space}rem;
+  }
+
+  .my--#{$space} {
+    padding: #{$space}rem 0;
+  }
+
+  .m--#{$space} {
+    padding: #{$space}rem;
+  }
 }

@@ -9,70 +9,110 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <header class="header">
-        <div class="header__logo"><h1>ADMIN</h1></div>
+    <header class="header">
+      <div class="header__logo"><h1>ADMIN</h1></div>
 
-        <div class="header__wrap">
-          <div class="header__button">
-            <div class="notification">
-              <div class="notification__item">
-                <div class="icon-wrap">
-                  <a href="#"><i class="zmdi zmdi-notifications"></i></a>
-                  <span>6</span>
+      <div class="header__wrap">
+        <div class="header__button">
+          <div class="notification">
+            <div class="notification__item">
+              <div class="icon-wrap">
+                <a href="#"><i class="zmdi zmdi-notifications"></i></a>
+                <span>6</span>
+              </div>
+              <div class="notification--dropdown js-dropdown hide">
+                <div class="notification__title">
+                  <p>You have 3 Notification</p>
                 </div>
-                <div class="notification--dropdown js-dropdown">
-                  <div class="notification__title">
-                    <p>You have 3 Notification</p>
-                  </div>
-                  <ul class="notification__list">
-                    <li class="notification__content">
-                      <p>You got a email notification</p>
-                      <span class="date">April 12, 2018 06:50</span>
-                    </li>
+                <ul class="notification__list">
+                  <li class="notification__list-item">
+                    <a>You got a email notification</a>
+                    <span class="date">April 12, 2018 06:50</span>
+                  </li>
 
-                    <li class="notification__content">
-                      <p>You got a email notification</p>
-                      <span class="date">April 12, 2018 06:50</span>
-                    </li>
+                  <li class="notification__list-item">
+                    <a>You got a email notification</a>
+                    <span class="date">April 12, 2018 06:50</span>
+                  </li>
 
-                    <li class="notification__content">
-                      <p>You got a email notification</p>
-                      <span class="date">April 12, 2018 06:50</span>
-                    </li>
-                  </ul>
-                  <div class="notification__footer">
-                    <a href="#">All notifications</a>
-                  </div>
+                  <li class="notification__list-item">
+                    <a>You got a email notification</a>
+                    <span class="date">April 12, 2018 06:50</span>
+                  </li>
+                </ul>
+                <div class="notification__footer">
+                  <a href="#">All notifications</a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="account">
-              <div class="account__img">
-                <img src="img/avataaars.svg" class="img--fit" alt="John Doe" />
-              </div>
+          <div class="account">
+            <div class="account__img">
+              <img src="img/avataaars.svg" class="img--fit" alt="John Doe" />
+            </div>
 
-              <div class="account__item-content">
-                <a href="#" class="text--dark">Nandom Alfred &nbsp; <i class="fas fa-angle-down"></i></a>
+            <div class="account__item-content">
+              <a href="#" class="text--dark dropdown" id="account">Nandom Alfred &nbsp; <i class="fas fa-angle-down"></i></a>
 
-                <div class="account-dropdown js-dropdown">
-                  <div class="account__info">
-                    <h5 class="name">
-                      <a href="#" class="text--dark">Nandom Alfred</a>
-                    </h5>
-                    <span class="email">johndoe@example.com</span>
-                  </div>
+              <div class="account-dropdown js-dropdown hide">
+                <div class="account__info">
+                  <h5 class="name">
+                    <a href="#" class="text--dark">Nandom Alfred</a>
+                  </h5>
+                  <span class="email">johndoe@example.com</span>
+                </div>
 
-                  <div class="account-dropdown__footer">
-                    <a href="#" class="text--white"> <i class="zmdi zmdi-power"></i>&nbsp; Logout</a>
-                  </div>
+                <div class="account-dropdown__footer">
+                  <a href="#" class="text--white"> <i class="zmdi zmdi-power"></i>&nbsp; Logout</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </header>
-    </main>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="mobile-menu">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger"><div></div></div>
+      </div>
+    </header>
+    <div class="row h--100">
+      <aside class="aside">
+        <div class="sidebar bg--light">
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a class="js-arrow list-item--active" href="dashboard.html"> <i class="nav__icon fas fa-tachometer-alt"></i>Dashboard</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="table.html"><i class="nav__icon fas fa-chart-bar"></i>Table</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="form.html"> <i class="nav__icon fas fa-table"></i>form</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="form.html"> <i class="nav__icon far fa-check-square"></i>Projects</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="calendar.html"> <i class="nav__icon fas fa-calendar-alt"></i>Item Four</a>
+              </li>
+              <li class="nav__list-item">
+                <a href="map.html"> <i class="nav__icon fas fa-map-marker-alt"></i>Item Five</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </aside>
+      <main class="main-content"></main>
+    </div>
+
+    <!-- <script>
+      document.querySelector('.dropdown').addEventListener('click', event => {
+        console.log(event.target);
+        event.preventDefault();
+      });
+    </script> -->
   </body>
 </html>
