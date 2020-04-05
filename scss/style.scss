@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,500,700,800,900&display=swap');
 @import 'config';
 @import 'utilities';
+@import 'mobile';
 
 // header
 .header {
@@ -154,19 +155,20 @@
 .aside {
   border-right: 1px solid $gray-color;
   width: 250px;
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
   bottom: 0;
 }
 .sidebar {
-  position: sticky;
+  position: fixed;
   overflow: hidden;
   height: 100vh;
+  width: 250px;
 }
 
 .nav {
-  margin-top: 6rem;
+  margin-top: 2rem;
   .nav__list {
     padding: 1.5rem;
   }
@@ -194,8 +196,11 @@
   }
 }
 
-// .main-content {
-//   flex-basis: 0;
-//   flex-grow: 1;
-//   max-width: 100%;
-// }
+.main-content {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding-top: 3rem;
+  max-width: 100%;
+  background: $white-dark-color;
+  height: 100vh;
+}
