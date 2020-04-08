@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <link rel="stylesheet" href="mdi-font/css/material-design-iconic-font.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Dashboard</title>
+    <title>Document</title>
   </head>
   <body>
     <header class="header">
@@ -88,7 +88,11 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__list-item">
-                <a class="js-arrow list-item--active" href="dashboard.html"> <i class="nav__icon fas fa-tachometer-alt"></i>Dashboard</a>
+                <a href="https://elesarr.herokuapp.com/"> <i class="nav__icon fas fa-home"></i>Home</a>
+              </li>
+
+              <li class="nav__list-item">
+                <a class="list-item--active" href="dashboard.html"> <i class="nav__icon fas fa-tachometer-alt"></i>Dashboard</a>
               </li>
               <li class="nav__list-item">
                 <a href="categories.html"><i class="nav__icon fas fa-border-all"></i>Categories</a>
@@ -111,46 +115,76 @@
       </aside>
       <main class="main-content">
         <div class="section__content">
-          <h2 class="title--l">overview</h2>
-          <div class="row overview">
-            <div class="overview__box">
-              <div class="overview__icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="text--white">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
+          <div class="main__heading">
+            <h2 class="title--l">Categories</h2>
+            <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> ADD CATEGORY</button>
+          </div>
 
-            <div class="overview__box">
-              <div class="overview__icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="text--white">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
+          <div class="table--responsive">
+            <table class="table">
+              <thead class="table__head">
+                <tr class="table__row">
+                  <th class="table__heading">id</th>
+                  <th class="table__heading">name</th>
+                  <th class="table__heading">status</th>
+                  <th class="table__heading">actions</th>
+                </tr>
+              </thead>
 
-            <div class="overview__box">
-              <div class="overview__icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <div class="text--white">
-                <h2>10368</h2>
-                <span>members online</span>
-              </div>
-            </div>
+              <tbody class="table__body">
+                <tr class="table__row">
+                  <td class="table__data">1</td>
+                  <td class="table__data">Category One</td>
+                  <td class="table__data active">Active</td>
+                  <td class="table__data">
+                    <div class="table__icon">
+                      <a href="#"><i class="zmdi zmdi-edit"></i></a>
+                      <a href="#"><i class="zmdi zmdi-delete"></i></a>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__data">2</td>
+                  <td class="table__data">Category Two</td>
+                  <td class="table__data active">Active</td>
+                  <td class="table__data">
+                    <div class="table__icon">
+                      <a href="#"><i class="zmdi zmdi-edit"></i></a>
+                      <a href="#"><i class="zmdi zmdi-delete"></i></a>
+                    </div>
+                  </td>
+                </tr>
 
-            <div class="overview__box">
-              <div class="overview__icon">
-                <i class="fas fa-chart-bar"></i>
+                <tr class="table__row">
+                  <td class="table__data">3</td>
+                  <td class="table__data">Category Three</td>
+                  <td class="table__data inactive">Inactive</td>
+                  <td class="table__data">
+                    <div class="table__icon">
+                      <a href="#"><i class="zmdi zmdi-edit"></i></a>
+                      <a href="#"><i class="zmdi zmdi-delete"></i></a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="formModal" class="modal">
+            <div class="modal__content">
+              <div class="modal__header">
+                <span id="closeBtn" class="close--btn">&times;</span>
               </div>
-              <div class="text--white">
-                <h2>10368</h2>
-                <span>members online</span>
+              <div class="modal__body">
+                <form class="form" action="">
+                  <div class="form__control">
+                    <label class="form__input-label" for="text">Category</label>
+                    <input type="text" class="form__input" name="title" id="" placeholder="Enter Category" />
+                  </div>
+                  <input class="form__btn" type="submit" value="submit" />
+                </form>
               </div>
+              <div class="modal__footer"></div>
             </div>
           </div>
         </div>
@@ -160,12 +194,33 @@
     <script>
       const menuToggler = document.querySelector('.menu--toggler');
       const aside = document.querySelector('.aside');
+      const modal = document.getElementById('formModal');
+      const modalBtn = document.getElementById('modalBtn');
+      const closeBtn = document.getElementById('closeBtn');
 
+      // Toggle navigation for responsive view
       menuToggler.addEventListener('click', (event) => {
         if (aside.classList.contains('show--sm')) {
           aside.classList.remove('show--sm');
         } else {
           aside.classList.add('show--sm');
+        }
+      });
+
+      // Open Modal
+      modalBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+      });
+
+      // Close Modal
+      closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+      });
+
+      // Close Modal if out side is click
+      window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
         }
       });
     </script>

@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   z-index: 1;
-  background-color: red;
   // display: none;
 }
 
@@ -81,5 +80,116 @@
 .menu--toggler:checked:hover + .menu__hamburger {
   .menu__hamburger--line {
     transform: rotate(225deg);
+  }
+}
+
+// Media query for mobile design
+@include mQ(900px) {
+  .mobile__menu-wrap {
+    display: block;
+  }
+
+  .nav {
+    margin-top: 1rem;
+  }
+
+  .row {
+    position: relative;
+    flex-wrap: wrap;
+  }
+
+  .aside {
+    position: fixed;
+    top: 4.5rem;
+    z-index: 1;
+    flex: one;
+    width: 200px;
+    display: none;
+  }
+
+  .sidebar {
+    position: absolute;
+    width: 200px;
+  }
+
+  .header {
+    justify-content: flex-end;
+  }
+
+  .header__button {
+    width: 300px;
+  }
+
+  .hide--sm {
+    display: none;
+  }
+
+  .show--sm {
+    display: block;
+  }
+}
+
+@include mQ(600px) {
+  .overview__box {
+    margin: 0.5rem;
+    width: calc(50% - 1rem);
+  }
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .header__button {
+    width: 250px;
+  }
+}
+
+@include mQ(600px) {
+  .overview__box {
+    margin: 0.5rem;
+    width: calc(50% - 1rem);
+  }
+
+  .sidebar {
+    width: 180px;
+  }
+
+  .header__button {
+    width: 250px;
+  }
+}
+
+@include mQ(400px) {
+  .overview__box {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .main__heading {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: auto;
+
+    .title--l {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .btn--add {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .header__button {
+    width: 200px;
+  }
+
+  .account__img {
+    margin-right: 0.5rem;
+  }
+
+  .text--sm {
+    font-size: 0.8rem;
   }
 }

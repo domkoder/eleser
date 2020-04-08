@@ -10,6 +10,7 @@ $near-white-color: #f5f5f9;
 $dark-color: #333333;
 $nav-items-color: #555;
 $radius: 5px;
+$shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 
 /**
 * major styling and reset
@@ -41,4 +42,10 @@ li {
 
 img {
   width: 100%;
+}
+
+@mixin mQ($media-size) {
+  @media screen and (max-width: $media-size) {
+    @content;
+  }
 }

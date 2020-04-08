@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,400,500,700,800,900&display=swap');
 @import 'config';
 @import 'utilities';
-@import 'mobile';
 
 // header
 .header {
   background-color: $light-color;
   display: flex;
+  width: 100%;
   align-items: center;
   height: 4.5rem;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 2;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: $shadow;
 
   &__logo {
     display: flex;
@@ -94,8 +94,8 @@
   background: #fff;
   transform-origin: right top;
   transition: all 0.4s ease;
-  z-index: 10;
-  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  box-shadow: $shadow;
   border-radius: $radius;
   padding: 1rem;
 
@@ -153,7 +153,6 @@
 
 // Side nav
 .aside {
-  border-right: 1px solid $gray-color;
   width: 250px;
   position: sticky;
   left: 0;
@@ -161,6 +160,7 @@
   bottom: 0;
 }
 .sidebar {
+  border-right: 1px solid $gray-color;
   position: fixed;
   overflow: hidden;
   height: 100vh;
@@ -168,21 +168,22 @@
 }
 
 .nav {
-  margin-top: 2rem;
+  margin-top: 5rem;
   .nav__list {
     padding: 1.5rem;
   }
 
   &__list-item {
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
   }
 
   .list-item--active {
     border-bottom: 2px solid $primary-color;
+    border-radius: $radius;
   }
 
   a {
-    padding: 0.3rem 0.1rem;
+    padding: 0.5rem 0.3rem;
     font-size: 1rem;
     color: $nav-items-color;
     font-weight: bold;
@@ -199,8 +200,157 @@
 .main-content {
   flex-basis: 0;
   flex-grow: 1;
-  padding-top: 3rem;
+  padding-top: 6rem;
   max-width: 100%;
   background: $white-dark-color;
   height: 100vh;
+  max-height: 100vh;
 }
+
+.section__content {
+  padding: 0 1.5rem;
+}
+
+.overview {
+  justify-content: space-between;
+  align-items: center;
+  &__box {
+    width: 23%;
+    padding: 1rem;
+    border-radius: $radius;
+    background-color: $shadow;
+    background: linear-gradient(to bottom, #21c8f6, $primary-color);
+    color: $white-color;
+
+    span {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+  }
+}
+
+.main__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Table style
+.table--responsive {
+  width: 100%;
+  background-color: $white-color;
+  border-radius: $radius;
+  padding: 0.5rem;
+  display: block;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  overflow: scroll;
+
+  &__head {
+    background-color: $primary-color;
+    :first-child {
+      border-radius: $radius 0 0 0;
+    }
+    :last-child {
+      border-radius: 0 $radius 0 0;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid #e9e9e9;
+    border-radius: $radius;
+  }
+
+  &__body {
+    :last-child {
+      border: none;
+    }
+  }
+
+  &__heading {
+    padding: 1rem;
+    color: #fff;
+    text-align: left;
+    font-weight: 900;
+  }
+
+  &__data {
+    font-weight: 200;
+    padding: 0.5rem 1rem;
+  }
+
+  &__icon {
+    a {
+      color: $gray-color;
+      font-size: 1rem;
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+// Modal styles
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__content {
+    max-width: 600px;
+    margin: 10% auto;
+    background-color: $white-color;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    animation-name: openModal;
+    animation-duration: 0.5s;
+  }
+
+  &__header {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__body {
+    padding: 0 1rem;
+  }
+
+  .close--btn {
+    color: #ccc;
+    float: right;
+    font-size: 1rem;
+    font-weight: 900;
+    &:hover {
+      color: #000000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  @keyframes openModal {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@import 'mobile';
