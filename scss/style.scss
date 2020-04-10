@@ -203,8 +203,7 @@
   padding-top: 6rem;
   max-width: 100%;
   background: $white-dark-color;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100%;
 }
 
 .section__content {
@@ -238,69 +237,9 @@
   justify-content: space-between;
 }
 
-// Table style
-.table--responsive {
-  width: 100%;
-  background-color: $white-color;
-  border-radius: $radius;
-  padding: 0.5rem;
-  display: block;
-  overflow-x: auto;
-}
-
-.table {
-  width: 100%;
-  max-width: 100%;
-  background-color: transparent;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-  overflow: scroll;
-
-  &__head {
-    background-color: $primary-color;
-    :first-child {
-      border-radius: $radius 0 0 0;
-    }
-    :last-child {
-      border-radius: 0 $radius 0 0;
-    }
-  }
-
-  &__row {
-    border-bottom: 1px solid #e9e9e9;
-    border-radius: $radius;
-  }
-
-  &__body {
-    :last-child {
-      border: none;
-    }
-  }
-
-  &__heading {
-    padding: 1rem;
-    color: #fff;
-    text-align: left;
-    font-weight: 900;
-  }
-
-  &__data {
-    font-weight: 200;
-    padding: 0.5rem 1rem;
-  }
-
-  &__icon {
-    a {
-      color: $gray-color;
-      font-size: 1rem;
-      padding-right: 0.5rem;
-    }
-  }
-}
-
 // Modal styles
 .modal {
-  display: none;
+  // display: none;
   position: fixed;
   z-index: 4;
   left: 0;
@@ -312,7 +251,7 @@
 
   &__content {
     max-width: 600px;
-    margin: 10% auto;
+    margin: 5% auto;
     background-color: $white-color;
     border-radius: $radius;
     box-shadow: $shadow;

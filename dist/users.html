@@ -60,7 +60,7 @@
                   <h5 class="account__name">
                     <a href="#" class="text--dark">Nandom Alfred</a>
                   </h5>
-                  <span class="account__email">nandom@example.com</span>
+                  <span class="account__email">nandom@gmail.com</span>
                 </div>
 
                 <div class="account-dropdown__footer">
@@ -116,65 +116,46 @@
       <main class="main-content">
         <div class="section__content">
           <div class="main__heading">
-            <h2 class="title--l">Categories</h2>
-            <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> ADD CATEGORY</button>
+            <h2 class="title--l">Users</h2>
+            <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> ADD USER</button>
           </div>
-
           <div class="table--responsive">
-            <table width="100%" class="table">
-              <thead class="table__head">
-                <tr class="table__row">
-                  <th class="table__heading">id</th>
-                  <th class="table__heading">name</th>
-                  <th class="table__heading">status</th>
-                  <th class="table__heading"></th>
+            <table class="user-table">
+              <thead class="user-table__head">
+                <tr>
+                  <td>name</td>
+                  <td>role</td>
+                  <td>type</td>
+                  <td></td>
                 </tr>
               </thead>
-
-              <tbody class="table__body">
-                <tr class="table__row">
-                  <td class="table__data">1</td>
-                  <td class="table__data">Category One</td>
-                  <td class="table__data active">Active</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="user-table__info">
+                      <h5>Nandom Afred</h5>
+                      <span>
+                        <a href="#">nandom@gmail.com</a>
+                      </span>
+                    </div>
                   </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__data">2</td>
-                  <td class="table__data">Category Two</td>
-                  <td class="table__data active">Active</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                  <td>
+                    <span class="role admin">admin</span>
                   </td>
-                </tr>
-
-                <tr class="table__row">
-                  <td class="table__data">3</td>
-                  <td class="table__data">Category Three</td>
-                  <td class="table__data inactive">Inactive</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                  <td>
+                    super user
                   </td>
-                </tr>
-
-                <tr class="table__row">
-                  <td class="table__data">3</td>
-                  <td class="table__data">Category Three</td>
-                  <td class="table__data inactive">Inactive</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                  <td>
+                    <span class="more">
+                      <i class="zmdi zmdi-more"></i>
+                    </span>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <div id="formModal" class="modal">
+          <!-- <div id="formModal" class="modal">
             <div class="modal__content">
               <div class="modal__header">
                 <span id="closeBtn" class="close--btn">&times;</span>
@@ -190,7 +171,7 @@
               </div>
               <div class="modal__footer"></div>
             </div>
-          </div>
+          </div> -->
         </div>
       </main>
     </div>

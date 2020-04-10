@@ -116,8 +116,8 @@
       <main class="main-content">
         <div class="section__content">
           <div class="main__heading">
-            <h2 class="title--l">Categories</h2>
-            <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> ADD CATEGORY</button>
+            <h2 class="title--l">Campaigns</h2>
+            <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> ADD CAMPAIGN</button>
           </div>
 
           <div class="table--responsive">
@@ -126,7 +126,10 @@
                 <tr class="table__row">
                   <th class="table__heading">id</th>
                   <th class="table__heading">name</th>
-                  <th class="table__heading">status</th>
+                  <th class="table__heading">Deadline</th>
+                  <th class="table__heading">Goal</th>
+                  <th class="table__heading">Status</th>
+
                   <th class="table__heading"></th>
                 </tr>
               </thead>
@@ -134,40 +137,53 @@
               <tbody class="table__body">
                 <tr class="table__row">
                   <td class="table__data">1</td>
-                  <td class="table__data">Category One</td>
+                  <td class="table__data">Campaigns One</td>
+                  <td class="table__data">2020-09-29 05:57</td>
+                  <td class="table__data">$999.00</td>
                   <td class="table__data active">Active</td>
                   <td class="table__data">
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-more"></i></button>
                   </td>
                 </tr>
+
                 <tr class="table__row">
                   <td class="table__data">2</td>
-                  <td class="table__data">Category Two</td>
+                  <td class="table__data">Campaigns Two</td>
+                  <td class="table__data">2020-09-29 05:57</td>
+                  <td class="table__data">$999.00</td>
                   <td class="table__data active">Active</td>
                   <td class="table__data">
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-more"></i></button>
                   </td>
                 </tr>
 
                 <tr class="table__row">
                   <td class="table__data">3</td>
-                  <td class="table__data">Category Three</td>
+                  <td class="table__data">Campaigns Three</td>
+                  <td class="table__data">2020-09-29 05:57</td>
+                  <td class="table__data">$999.00</td>
                   <td class="table__data inactive">Inactive</td>
                   <td class="table__data">
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-more"></i></button>
                   </td>
                 </tr>
 
                 <tr class="table__row">
-                  <td class="table__data">3</td>
-                  <td class="table__data">Category Three</td>
+                  <td class="table__data">4</td>
+                  <td class="table__data">Campaigns Four</td>
+                  <td class="table__data">2020-09-29 05:57</td>
+                  <td class="table__data">$999.00</td>
                   <td class="table__data inactive">Inactive</td>
                   <td class="table__data">
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
                     <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-more"></i></button>
                   </td>
                 </tr>
               </tbody>
@@ -182,9 +198,49 @@
               <div class="modal__body">
                 <form class="form" action="">
                   <div class="form__control">
-                    <label class="form__input-label" for="text">Category</label>
+                    <label class="form__input-label" for="text">Project Name:</label>
                     <input type="text" class="form__input" name="title" id="" placeholder="Enter Category" />
                   </div>
+
+                  <div class="form__control">
+                    <label class="form__input-label" for="text">Project Description:</label>
+                    <textarea rows="5" class="form__input" placeholder="Write a short description"></textarea>
+                  </div>
+
+                  <div class="form__inline">
+                    <div class="form--inline-item">
+                      <label class="form__input-label" for="number">Project Deadline:</label>
+                      <input type="date" class="form__input" name="project_deadline" id="" value="11/04/2020" />
+                    </div>
+
+                    <div class="form--inline-item">
+                      <label class="form__input-label" for="number">Project Goal:</label>
+                      <input type="time" class="form__input" name="project_goal" id="" />
+                    </div>
+                  </div>
+
+                  <div class="form__inline">
+                    <div class="form--inline-item form__file">
+                      <label class="form__input-label" for="number">Upload Pitch Deck:</label>
+                      <input type="file" class="form__file-input" name="" id="" />
+                    </div>
+
+                    <div class="form--inline-item form__file">
+                      <label class="form__file-label" for="number">Image Slide 1:</label>
+                      <input type="file" class="form__file-input" name="" id="" />
+                    </div>
+
+                    <div class="form--inline-item form__file">
+                      <label class="form__input-label" for="number">Image Slide 2:</label>
+                      <input type="file" class="form__file-input" name="" id="" />
+                    </div>
+
+                    <div class="form--inline-item form__file">
+                      <label class="form__input-label" for="number">Image Slide 3:</label>
+                      <input type="file" class="form__file-input" name="" id="" />
+                    </div>
+                  </div>
+
                   <input class="form__btn" type="submit" value="submit" />
                 </form>
               </div>
