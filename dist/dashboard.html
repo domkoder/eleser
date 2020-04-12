@@ -16,11 +16,14 @@
         <div class="header__button">
           <div class="notification">
             <div class="notification__item">
-              <div class="icon-wrap">
-                <a href="#"><i class="zmdi zmdi-notifications"></i></a>
-                <span>6</span>
-              </div>
-              <div class="notification--dropdown js-dropdown">
+              <a class="dropdown" href="#">
+                <div class="icon-wrap">
+                  <i class="zmdi zmdi-notifications"></i>
+                  <span>6</span>
+                </div>
+              </a>
+
+              <div class="notification--dropdown js-dropdown hide">
                 <div class="notification__title">
                   <p>You have 3 Notification</p>
                 </div>
@@ -55,7 +58,7 @@
             <div class="account__item-content">
               <a href="#" class="text--dark dropdown text--sm" id="account">Nandom&nbsp; <i class="fas fa-angle-down"></i></a>
 
-              <div class="account-dropdown js-dropdown">
+              <div class="account--dropdown js-dropdown hide">
                 <div class="account__info">
                   <h5 class="account__name">
                     <a href="#" class="text--dark">Nandom Alfred</a>

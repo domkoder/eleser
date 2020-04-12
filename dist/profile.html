@@ -91,11 +91,7 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__list-item">
-                <a href="https://elesarr.herokuapp.com/"> <i class="nav__icon fas fa-home"></i>Home</a>
-              </li>
-
-              <li class="nav__list-item">
-                <a class="list-item--active" href="dashboard.html"> <i class="nav__icon fas fa-tachometer-alt"></i>Dashboard</a>
+                <a class="js-arrow list-item--active" href="dashboard.html"> <i class="nav__icon fas fa-tachometer-alt"></i>Dashboard</a>
               </li>
               <li class="nav__list-item">
                 <a href="categories.html"><i class="nav__icon fas fa-border-all"></i>Categories</a>
@@ -119,62 +115,22 @@
       <main class="main-content">
         <div class="section__content">
           <div class="main__heading">
-            <h2 class="title--l">Categories</h2>
-            <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> ADD CATEGORY</button>
+            <h2 class="title--l">Profile</h2>
+            <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> EDIT PROFILE</button>
           </div>
-
-          <div class="table--responsive bg--white">
-            <table width="100%" class="table">
-              <thead class="table__head">
-                <tr class="table__row">
-                  <th class="table__heading">id</th>
-                  <th class="table__heading">name</th>
-                  <th class="table__heading">status</th>
-                  <th class="table__heading"></th>
-                </tr>
-              </thead>
-
-              <tbody class="table__body">
-                <tr class="table__row">
-                  <td class="table__data">1</td>
-                  <td class="table__data">Category One</td>
-                  <td class="table__data active">Active</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
-                  </td>
-                </tr>
-                <tr class="table__row">
-                  <td class="table__data">2</td>
-                  <td class="table__data">Category Two</td>
-                  <td class="table__data active">Active</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
-                  </td>
-                </tr>
-
-                <tr class="table__row">
-                  <td class="table__data">3</td>
-                  <td class="table__data">Category Three</td>
-                  <td class="table__data inactive">Inactive</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
-                  </td>
-                </tr>
-
-                <tr class="table__row">
-                  <td class="table__data">3</td>
-                  <td class="table__data">Category Three</td>
-                  <td class="table__data inactive">Inactive</td>
-                  <td class="table__data">
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
-                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="profile bg--white">
+            <div class="profile__img-wrap">
+              <img class="profile__img" src="img/avataaars.svg" alt="Profile Image" />
+            </div>
+            <div class="profile__info">
+              <ul class="profile__list">
+                <li class="profile__list-item"><span>first name :</span> Nandom</li>
+                <li class="profile__list-item"><span>last name :</span> Alfred</li>
+                <li class="profile__list-item"><span>username :</span> scotrolex</li>
+                <li class="profile__list-item"><span>email :</span> <a href="#">nandom@example.com</a></li>
+                <li class="profile__list-item"><span>address :</span>Rayfield Jos, plateau state, NG</li>
+              </ul>
+            </div>
           </div>
 
           <div id="formModal" class="modal">
@@ -186,9 +142,25 @@
               <div class="modal__body">
                 <form class="form" action="">
                   <div class="form__control">
-                    <label class="form__input-label" for="text">Category</label>
-                    <input type="text" class="form__input" name="title" id="" placeholder="Enter category name" />
+                    <label class="form__input-label" for="text">Username</label>
+                    <input type="text" class="form__input" name="title" placeholder="Enter your username" value="scotrolex" />
                   </div>
+
+                  <div class="form__control">
+                    <label class="form__input-label" for="text">First Name</label>
+                    <input type="text" class="form__input" name="title" placeholder="Enter your first name" value="Nandom" />
+                  </div>
+
+                  <div class="form__control">
+                    <label class="form__input-label" for="text">Last Name</label>
+                    <input type="text" class="form__input" name="title" placeholder="Enter your last name" value="Alfred" />
+                  </div>
+
+                  <div class="form__control">
+                    <label class="form__input-label" for="text">Last Name</label>
+                    <input type="text" class="form__input" name="title" placeholder="Enter your last name" value="Alfred" />
+                  </div>
+
                   <input class="form__btn" type="submit" value="submit" />
                 </form>
               </div>

@@ -6,11 +6,7 @@ const closeBtn = document.getElementById('closeBtn');
 
 // Toggle navigation for responsive view
 menuToggler.addEventListener('click', event => {
-  if (aside.classList.contains('show--sm')) {
-    aside.classList.remove('show--sm');
-  } else {
-    aside.classList.add('show--sm');
-  }
+  aside.classList.toggle('show--sm');
 });
 
 // Open Form Modal
@@ -49,9 +45,14 @@ document.querySelectorAll('.file-upload__btn').forEach(button => {
   });
 });
 
+// notification and account dropdown
 document.querySelectorAll('.dropdown').forEach(dropdown => {
   dropdown.addEventListener('click', event => {
-    console.log(dropdown.nextElementSibling);
+    if (dropdown.nextElementSibling.classList.contains('notification--dropdown')) {
+      document.querySelector('.notification--dropdown').classList.toggle('hide');
+    } else if (dropdown.nextElementSibling.classList.contains('account--dropdown')) {
+      document.querySelector('.account--dropdown').classList.toggle('hide');
+    }
     // console.log(jsDropdown);
   });
 });
