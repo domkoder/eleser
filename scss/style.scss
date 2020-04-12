@@ -239,7 +239,7 @@
 
 // Modal styles
 .modal {
-  // display: none;
+  display: none;
   position: fixed;
   z-index: 4;
   left: 0;
@@ -251,7 +251,7 @@
 
   &__content {
     max-width: 600px;
-    margin: 5% auto;
+    margin: 10% auto;
     background-color: $white-color;
     border-radius: $radius;
     box-shadow: $shadow;

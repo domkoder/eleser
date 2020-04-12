@@ -144,21 +144,6 @@
   }
 }
 
-@include mQ(600px) {
-  .overview__box {
-    margin: 0.5rem;
-    width: calc(50% - 1rem);
-  }
-
-  .sidebar {
-    width: 180px;
-  }
-
-  .header__button {
-    width: 250px;
-  }
-}
-
 @include mQ(400px) {
   .overview__box {
     width: 100%;

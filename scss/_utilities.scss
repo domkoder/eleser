@@ -59,6 +59,10 @@
   background-color: $light-color;
 }
 
+.bg--white {
+  background-color: $white-color;
+}
+
 .active {
   color: rgb(0, 173, 95);
 }
@@ -116,7 +120,6 @@ $space-amounts: (1, 2, 3, 4, 5);
 // Table style
 .table--responsive {
   width: 100%;
-  background-color: $white-color;
   border-radius: $radius;
   padding: 0.5rem;
   display: block;
@@ -194,7 +197,7 @@ $space-amounts: (1, 2, 3, 4, 5);
   padding: 1rem;
 
   &__control {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     width: 100%;
     small {
       color: $gray-color;
@@ -206,7 +209,7 @@ $space-amounts: (1, 2, 3, 4, 5);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   &--inline-item {
@@ -220,7 +223,7 @@ $space-amounts: (1, 2, 3, 4, 5);
   }
 
   &__input {
-    display: block;
+    // display: block;
     border-radius: $radius;
     border: 1px solid #a0abb7;
     color: rgb(56, 56, 56);
@@ -241,18 +244,67 @@ $space-amounts: (1, 2, 3, 4, 5);
     text-align: center;
     width: 100%;
     color: $white-color;
+    margin-top: 0.8rem;
     &:hover {
       background-color: darken($primary-color, 3%);
     }
   }
 
-  &__file {
-    position: relative;
+  &__social-input {
+    display: flex;
+
+    i {
+      width: 3rem;
+
+      &.fa-twitter {
+        color: #38a1f3;
+      }
+      &.fa-facebook {
+        color: #3b5998;
+      }
+      &.fa-instagram {
+        color: #3f729b;
+      }
+      &.fa-youtube {
+        color: #c4302b;
+      }
+      &.fa-linkedin {
+        color: #0077b5;
+      }
+    }
+  }
+}
+
+.file-upload {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+
+  &__input {
+    display: none;
   }
 
-  &__file-input {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &__btn {
+    background-color: #009879;
+    border: 2px solid #00745d;
+    color: #fff;
+    border-radius: $radius;
+    outline: none;
+    padding: 0.5rem 0.3rem;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    margin-right: 0.3rem;
+    &:active {
+      background-color: #00745d;
+    }
+  }
+
+  &__label {
+    max-width: 150px;
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
