@@ -136,6 +136,7 @@ $space-amounts: (1, 2, 3, 4, 5);
   overflow: scroll;
 
   &__head {
+    text-transform: uppercase;
     background-color: $primary-color;
     :first-child {
       border-radius: $radius 0 0 0;
@@ -160,7 +161,7 @@ $space-amounts: (1, 2, 3, 4, 5);
     padding: 1rem;
     color: #fff;
     text-align: left;
-    font-weight: 900;
+    font-weight: 600;
   }
 
   &__data {
@@ -189,6 +190,21 @@ $space-amounts: (1, 2, 3, 4, 5);
     color: #808080;
     position: absolute;
     transform: translate(-50%, -50%);
+  }
+}
+
+// user table
+.user-table {
+  .table__heading {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #888888;
+    text-transform: uppercase;
+  }
+
+  .table__heading,
+  .table__data {
+    padding: 1.43rem 1rem;
   }
 }
 

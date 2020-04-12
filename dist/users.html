@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <link rel="stylesheet" href="mdi-font/css/material-design-iconic-font.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
-    <title>Document</title>
+    <title>Dashboard</title>
   </head>
   <body>
     <header class="header">
@@ -16,11 +16,14 @@
         <div class="header__button">
           <div class="notification">
             <div class="notification__item">
-              <div class="icon-wrap">
-                <a href="#"><i class="zmdi zmdi-notifications"></i></a>
-                <span>6</span>
-              </div>
-              <div class="notification--dropdown js-dropdown hide">
+              <a class="dropdown" href="#">
+                <div class="icon-wrap">
+                  <i class="zmdi zmdi-notifications"></i>
+                  <span>6</span>
+                </div>
+              </a>
+
+              <div class="notification--dropdown js-dropdown">
                 <div class="notification__title">
                   <p>You have 3 Notification</p>
                 </div>
@@ -55,12 +58,12 @@
             <div class="account__item-content">
               <a href="#" class="text--dark dropdown text--sm" id="account">Nandom&nbsp; <i class="fas fa-angle-down"></i></a>
 
-              <div class="account-dropdown js-dropdown hide">
+              <div class="account-dropdown js-dropdown">
                 <div class="account__info">
                   <h5 class="account__name">
                     <a href="#" class="text--dark">Nandom Alfred</a>
                   </h5>
-                  <span class="account__email">nandom@gmail.com</span>
+                  <span class="account__email">nandom@example.com</span>
                 </div>
 
                 <div class="account-dropdown__footer">
@@ -119,45 +122,94 @@
             <h2 class="title--l">Users</h2>
             <button id="modalBtn" class="btn--add"><i class="zmdi zmdi-plus"></i> ADD USER</button>
           </div>
-          <div class="table--responsive">
-            <table class="user-table">
+          <div class="table--responsive bg--white">
+            <table class="table user-table">
               <thead class="user-table__head">
-                <tr>
-                  <td>name</td>
-                  <td>role</td>
-                  <td>type</td>
-                  <td></td>
+                <tr class="table__row">
+                  <th class="table__heading">id</th>
+                  <th class="table__heading">name</th>
+                  <th class="table__heading">role</th>
+                  <th class="table__heading">type</th>
+                  <td class="table__heading"></td>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="user-table__info">
+              <tbody class="table__body">
+                <tr class="table__row">
+                  <td class="table__data">1</td>
+                  <td class="table__data">
+                    <div class="table__info">
                       <h5>Nandom Afred</h5>
                       <span>
                         <a href="#">nandom@gmail.com</a>
                       </span>
                     </div>
                   </td>
-                  <td>
+                  <td class="table__data">
                     <span class="role admin">admin</span>
                   </td>
-                  <td>
-                    super user
+                  <td class="table__data">
+                    Normal User
                   </td>
-                  <td>
-                    <span class="more">
-                      <i class="zmdi zmdi-more"></i>
-                    </span>
+                  <td class="table__data">
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-more"></i></button>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">2</td>
+                  <td class="table__data">
+                    <div class="table__info">
+                      <h5>Nandom Afred</h5>
+                      <span>
+                        <a href="#">nandom@gmail.com</a>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="table__data">
+                    <span class="role admin">admin</span>
+                  </td>
+                  <td class="table__data">
+                    Normal User
+                  </td>
+                  <td class="table__data">
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-more"></i></button>
+                  </td>
+                </tr>
+
+                <tr class="table__row">
+                  <td class="table__data">3</td>
+                  <td class="table__data">
+                    <div class="table__info">
+                      <h5>Nandom Afred</h5>
+                      <span>
+                        <a href="#">nandom@gmail.com</a>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="table__data">
+                    <span class="role admin">admin</span>
+                  </td>
+                  <td class="table__data">
+                    Standard User
+                  </td>
+                  <td class="table__data">
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-edit"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-delete"></i></button>
+                    <button class="table__icon"><i class="table__icon-item zmdi zmdi-more"></i></button>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <!-- <div id="formModal" class="modal">
+          <div id="formModal" class="modal">
             <div class="modal__content">
               <div class="modal__header">
+                <h3>Add User</h3>
                 <span id="closeBtn" class="close--btn">&times;</span>
               </div>
               <div class="modal__body">
@@ -171,43 +223,11 @@
               </div>
               <div class="modal__footer"></div>
             </div>
-          </div> -->
+          </div>
         </div>
       </main>
     </div>
 
-    <script>
-      const menuToggler = document.querySelector('.menu--toggler');
-      const aside = document.querySelector('.aside');
-      const modal = document.getElementById('formModal');
-      const modalBtn = document.getElementById('modalBtn');
-      const closeBtn = document.getElementById('closeBtn');
-
-      // Toggle navigation for responsive view
-      menuToggler.addEventListener('click', (event) => {
-        if (aside.classList.contains('show--sm')) {
-          aside.classList.remove('show--sm');
-        } else {
-          aside.classList.add('show--sm');
-        }
-      });
-
-      // Open Modal
-      modalBtn.addEventListener('click', () => {
-        modal.style.display = 'block';
-      });
-
-      // Close Modal
-      closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-
-      // Close Modal if out side is click
-      window.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    </script>
+    <script src="js/app.js"></script>
   </body>
 </html>

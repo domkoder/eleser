@@ -48,3 +48,10 @@ document.querySelectorAll('.file-upload__btn').forEach(button => {
     label.textContent = filenameList.join(', ') || defaultLabelText;
   });
 });
+
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+  dropdown.addEventListener('click', event => {
+    console.log(dropdown.nextElementSibling);
+    // console.log(jsDropdown);
+  });
+});

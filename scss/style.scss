@@ -90,7 +90,6 @@
   position: absolute;
   top: 58px;
   right: 0;
-  // border: 1px solid black;
   background: #fff;
   transform-origin: right top;
   transition: all 0.4s ease;
@@ -112,6 +111,20 @@
     position: absolute;
     top: -18px;
     right: 20px;
+  }
+}
+
+.account-dropdown {
+  display: none;
+}
+
+.notification--dropdown {
+  // display: none;
+  right: -135px;
+
+  &::after {
+    top: -18px;
+    right: 153px;
   }
 }
 
@@ -260,10 +273,11 @@
   }
 
   &__header {
-    padding: 0.5rem 1rem;
+    padding: 0 2rem;
+    padding-top: 1rem;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 
   &__body {
