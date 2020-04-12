@@ -117,6 +117,39 @@ $space-amounts: (1, 2, 3, 4, 5);
   }
 }
 
+.user {
+  display: inline-block;
+  line-height: 30px;
+  font-weight: 400;
+  padding: 0 1rem;
+  border-radius: 3px;
+  text-transform: capitalize;
+  background-color: #00b5e9;
+  color: #fff;
+}
+
+.admin {
+  display: inline-block;
+  line-height: 30px;
+  font-weight: 400;
+  padding: 0 1rem;
+  border-radius: 3px;
+  text-transform: capitalize;
+  background-color: #fa4251;
+  color: #fff;
+}
+
+.member {
+  display: inline-block;
+  line-height: 30px;
+  font-weight: 400;
+  padding: 0 1rem;
+  border-radius: 3px;
+  text-transform: capitalize;
+  background-color: #57b846;
+  color: #fff;
+}
+
 // Table style
 .table--responsive {
   width: 100%;
